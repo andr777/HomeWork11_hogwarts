@@ -68,4 +68,16 @@ public class Gryffindors extends Hogwarts {
                 '.';
 
      }
+
+    public void StudentsComparison(Object students2) {
+        System.out.print( "MagicPower + TransgressionDistance(метод в Gryffindors)): ");
+        Gryffindors std = (Gryffindors) students2;
+        if ((this.honour + this.bravery + this.nobility) > (std.getHonour()+std.getBravery()+std.getNobility())) {
+            System.out.println(this.getName() + " круче чем " + std.getName());
+        } else if ((this.honour + this.bravery + this.nobility) < (std.getHonour()+std.getBravery()+std.getNobility())) {
+            System.out.println(std.getName() + " круче чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " равны " + std.getName());
+        }
+    }
 }

@@ -65,4 +65,16 @@ public class Hogwarts {
                 ", transgressionDistance=" + transgressionDistance +
                 '}';
     }
+
+    public void StudentsComparisonHogwarts(Object students2) {
+        System.out.print( "MagicPower + TransgressionDistance(метод в Hogwarts)): ");
+        Hogwarts std = (Hogwarts) students2;
+        if ((this.magicPower + this.transgressionDistance) > (std.getMagicPower()+std.getTransgressionDistance())) {
+            System.out.println(this.name + " круче чем " + std.name);
+        } else if ((this.magicPower + this.transgressionDistance) < (std.getMagicPower()+std.getTransgressionDistance())) {
+            System.out.println(std.name + " круче чем " + this.name);
+        } else {
+            System.out.println(this.name + " равны " + std.name);
+                    }
+    }
 }

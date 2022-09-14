@@ -28,19 +28,31 @@ public class Main {
         System.out.println("вывод списока всех студенто и параметров");
         listStudents(students);   // вывод списока всех студенто и параметров
 
-        System.out.println("вывод списока одого студента и его параметров");
+        System.out.println("\nвывод списока одого студента и его параметров");
         System.out.println(students[0]);   // вывод  одого студента и параметров
         listOneStudents(students[11]);  // метод, вывод  одого студента и его параметров
 
-
+        System.out.println("\nсравнение студентов с одинакового факультета по суммарным параметрам факультета");
         // сравнение студентов с одинакового факультета по суммарным параметрам
+        ((Gryffindors) students[0]).StudentsComparison(students[1])  ;          // сравнение в методе в классе
+        ((Hufflepuff) students[3]).StudentsComparison(students[5])  ;          // сравнение в методе в классе
+        ((Ravenclaws) students[6]).StudentsComparison(students[7])  ;          // сравнение в методе в классе
+        ((Slytherin) students[9]).StudentsComparison(students[11])  ;          // сравнение в методе в классе
+
+        System.out.println("\nметод в майн1");
         facultyStudentsComparison((Gryffindors) students[0], (Gryffindors) students[1]);
         facultyStudentsComparison((Hufflepuff) students[3], (Hufflepuff) students[5]);
         facultyStudentsComparison((Ravenclaws) students[6], (Ravenclaws) students[7]);
         facultyStudentsComparison((Slytherin) students[9], (Slytherin) students[11]);
 
+        System.out.println("\nсравнение студентов с любых факультетов по параметрам  MagicPower + TransgressionDistance");
         // сравнение студентов с любых факультетов по параметрам  MagicPower + TransgressionDistance
-        StudentsComparison((Hogwarts) students[0], (Hogwarts) students[1]);
+        ((Hogwarts) students[0]).StudentsComparisonHogwarts(students[11])  ;          // сравнение в методе в классе Hogwarts
+        ((Hogwarts) students[0]).StudentsComparisonHogwarts(students[8])  ;          // сравнение в методе в классе Hogwarts
+        ((Hogwarts) students[0]).StudentsComparisonHogwarts(students[5])  ;          // сравнение в методе в классе Hogwarts
+
+        System.out.println("\nметод в майн2");
+
         StudentsComparison((Hogwarts) students[0], (Hogwarts) students[11]);
         StudentsComparison((Hogwarts) students[0], (Hogwarts) students[8]);
         StudentsComparison((Hogwarts) students[0], (Hogwarts) students[5]);

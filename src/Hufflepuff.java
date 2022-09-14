@@ -64,4 +64,16 @@ public class Hufflepuff extends Hogwarts {
                 ", honesty=" + honesty +
                 '.';
     }
+
+    public void StudentsComparison(Object students2) {
+        System.out.print( "MagicPower + TransgressionDistance(метод в Hufflepuff)): ");
+        Hufflepuff std = (Hufflepuff) students2;
+        if ((this.honesty + this.loyalty + this.diligence) > (std.getHonesty()+std.getLoyalty()+std.getDiligence())) {
+            System.out.println(this.getName() + " круче чем " + std.getName());
+        } else if ((this.honesty + this.loyalty + this.diligence) < (std.getHonesty()+std.getLoyalty()+std.getDiligence())) {
+            System.out.println(std.getName() + " круче чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " равны " + std.getName());
+        }
+    }
 }

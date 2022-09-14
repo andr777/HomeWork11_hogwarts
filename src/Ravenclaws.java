@@ -58,4 +58,16 @@ public class Ravenclaws  extends Hogwarts {
                 ", creation=" + creation +
                 '.';
     }
+
+    public void StudentsComparison(Object students2) {
+        System.out.print( "MagicPower + TransgressionDistance(метод в Ravenclaws)): ");
+        Ravenclaws std = (Ravenclaws) students2;
+        if ((this.mind + this.wit + this.wisdom + this.creation) > (std.getWit()+std.getMind()+std.getWisdom()+std.getCreation())) {
+            System.out.println(this.getName() + " круче чем " + std.getName());
+        } else if ((this.mind + this.wit + this.wisdom + this.creation) < (std.getWit()+std.getMind()+std.getWisdom()+std.getCreation())) {
+            System.out.println(std.getName() + " круче чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " равны " + std.getName());
+        }
+    }
 }

@@ -70,4 +70,16 @@ public class Slytherin  extends Hogwarts {
                 ", clustForPower=" + clustForPower +
                 '.';
     }
+
+    public void StudentsComparison(Object students2) {
+        System.out.print( "MagicPower + TransgressionDistance(метод в Slytherin)): ");
+        Slytherin std = (Slytherin) students2;
+        if ((this.cinaccessibility + this.clustForPower + this.cresourcefulness + this.csusceptibility + this.cunning) > (std.getCunning()+std.getCsusceptibility()+std.getCresourcefulness()+std.getCinaccessibility()+std.getClustForPower())) {
+            System.out.println(this.getName() + " круче чем " + std.getName());
+        } else if ((this.cinaccessibility + this.clustForPower + this.cresourcefulness + this.csusceptibility + this.cunning) < (std.getCunning()+std.getCsusceptibility()+std.getCresourcefulness()+std.getCinaccessibility()+std.getClustForPower())) {
+            System.out.println(std.getName() + " круче чем " + this.getName());
+        } else {
+            System.out.println(this.getName() + " равны " + std.getName());
+        }
+    }
 }
